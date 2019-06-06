@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //concat: 把数组连接起来
+        // var arrNames1=['成龙','王宝强','周星驰'];
+        // var arrNames2=['成龙1','王宝强1','周星驰1'];
+        // var newArr=arrNames1.concat(arrNames2);
+        // alert(newArr);
+
+
+
+        //length属性:获取字符串的字符个数。（无论中文还是英文都算一个）
+        // var msg='hello你好';
+        // alert(msg.length);
+
+
+        //charAt(index)方法：获取指定索引位置的字符（索引从0开始）
+        // var msg='北京天安门，天安门上太阳升。';
+        // alert(msg.charAt(9));//根据指定的索引，找到对应的字符。
+
+        //indexOf(‘字符串’，startIndex)方法：获取指定字符串第一次出现的位置。startIndex表示从第几个开始搜索
+        // var msg='北京天安门，天安门上太阳升。';
+        // alert(msg.indexOf('天安门',2));
+//--------列子
+        // var msg='我爱北京天安门，天安门上太阳升。我爱北京天安门，天安门上太阳升。我爱北京天安门，' +
+        //     '天安门上太阳升。我爱北京天安门，天安门上太阳升。我爱北京天安门，天安门上太阳升。';
+        // var index=0,count=0,keywords='天安门';
+        // while((index=msg.indexOf(keywords,index))!=-1){
+        //     count++;
+        //     alert('第'+count+'次出现“天安门”的索引位置是：'+index);
+        //     index=index+keywords.length;
+        // }
+
+
+        // //substr(startIndex,len)
+        // var msg='我爱北京天安门.net天安门上太阳升。';
+        // //msg=msg.substr(7,4);
+        // msg=msg.substr(7);//不写第二个参数，表示一直截取到最后。
+        // alert(msg);
+
+
+        // //substring(startIndex,stopIndex)
+        // var msg='我爱北京天安门.net天安门上太阳升。';
+        // //从第7个索引开始截取，截取到索引为11的位置为止（不包括索引为11的字符）。
+        // msg=msg.substring(7,11);
+        // alert(msg);
+
+//---------
+        // var msg='姚明|科比|加内特|';
+        // //msg=msg.substr(0,msg.length-1);
+        // msg=msg.substring(0,msg.length-1);
+        // alert(msg);
+
+
+
+
+        //----split---------
+        // var msg='周星驰|王宝强|古天乐|张三|李四|王五';
+        // //以 | 分割，返回一个分割后的字符串数组
+        // //var result=msg.split('|');
+        // var result=msg.split('|',3);//分割完毕后，只返回前三个
+        // alert(result);
+        // alert(result.length);
+
+
+        var msg='周星驰|王宝强#古天乐@张三|李四|王五';
+        //split()函数配合正则表达式来使用
+        var result=msg.split(/\||#|@/);
+        alert(result);
+        alert(result.length);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

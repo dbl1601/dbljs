@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // //当一个函数注册给不同对象的时候，在调用时，函数中使用的this表示的是不同的对象
+        // function f1() {
+        //     alert(this);
+        // }
+        // //在一个函数内部，this表示的是那个对象，取决于当前函数是哪个对象的函数
+        // //window.f1();
+        // function Person() {
+        //     this.toString=function () {
+        //         return 'Person类型';
+        //     };
+        // }
+        // var p1=new Person();
+        // p1.toString();
+        // p1.fn=f1;
+        // p1.fn();
+
+
+        //-----------列子-------------
+        // var name="window中的name变量";
+        // function Person() {
+        //     this.name="person中的name属性";
+        //     this.getName=function () {
+        //         alert(this.name);//person中的name属性
+        //         return function () { return this.name;};
+        //     };
+        // }
+        // var p=new Person();
+        // alert(p.getName()());//结果是什么？why？  ：window中的name变量
+
+
+        var name="window中的name变量";
+        function Person() {
+            this.name="person中的name属性";
+            this.getName=function () {
+                var that=this;
+                return function () { return that.name;};
+            };
+        }
+        var p=new Person();
+        alert(p.getName()());//结果是什么？  这时候结果为：person中的name变量
+    </script>
+</head>
+<body>
+
+</body>
+</html>

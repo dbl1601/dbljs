@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+    // //这是一个函数，也可以叫做“函数对象”
+    // function Person() {
+    // }
+    //
+    //
+    // //第一种方式：
+    //     //对于Person函数可以直接调用，直接调用就是把person（）当作一个函数来使用，列如：
+    //     Person();//把person当作一个普通函数来调用
+    //
+    // //第二种方式：把person函数当作“类”来使用，通过person函数创建一个person类型的对象P。
+    //     //当调用person函数前加new关键字，表示要通过person()函数创建一个对象，
+    //     // 此时，一般把Person()函数叫做“构造函数”，也就是说，当直接调用一个函数的时候，那么叫”函数“，
+    //      // 当通过new关键字调用一个函数的时候，这个函数就叫“构造函数”（不叫“类”）。
+    //     var p=new Person();//这样就创建了一个Person类型的对象p。
+    //
+    // //当定义一个函数的时候，如果要将该函数作为“构造函数”来使用，那么函数名就应该采用“帕斯卡”命名法
+    // // （每个单词的首字母都大写）。如果定义函数的时候就确定，将来该函数只会作为一个普通函数来调用，那么就采用
+    // //“驼峰命名法”。
+
+
+    // function Person() {
+    // }
+    // var p=new Person();
+    // p.user_name='zsf';
+    // p.user_age=19;
+    // p.user_email='zsf@163.com';
+    // p.sayHi=function () {
+    //     alert('大家好，我叫：'+this.user_name+',今年'+this.user_age+'岁了。');
+    // };
+    // p.sayHi();
+
+
+     //通过构造函数创建Person对象
+     function Person(name,age,email) {
+         this.user_name=name;
+         this.user_age=age;
+         this.user_email=email;
+         this.sayHello=function () {
+             alert(this.user_name+'  '+this.user_age+' '+this.user_email);
+         };
+     }
+     //对象也可以看作是键值对集合，所以对象也可以进行遍历
+    var p1=new Person('刘翔',18,'lx@163.com');
+     for(var key in p1){
+         alert(key + '   '+p1[key]);
+     }
+    // p1.sayHello();
+    //          还可以分开写成：
+    //         alert(p1.user_name);
+    //         alert(p1['user_age']);
+    //         alert(p1['user_email']);
+
+
+     var p2=new Person('cx',19,'cx@163.com');
+     p2.sayHello();
+
+    </script>
+</head>
+<body>
+
+</body>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // function myfunction(x,y,z) {
+        //     for(var i=0;i<10;i++){
+        //         alert(i);
+        //     }
+        // }
+        //把myfunction当作函数来调用
+        //myfunction();
+        //同时myfunction也是一个对象（是一个函数对象）
+        //alert(myfunction.toString());//返回方法的源代码（可以看到JavaScript函数编写的源代码）
+        //alert(myfunction.length);//返回的是函数定义的形参的个数
+
+
+
+        //----匿名函数
+        //一.
+        //把一个匿名函数赋值给了一个变量f1，此时的f1是变量名，不是函数名。
+        // 因为下面这句代码是赋值语句，所以需要最后加一个‘分号'，定义函数的时候不需要加’分号‘的。
+        // var f1=function(){  alert('这就是一个匿名函数！！！');};
+        // f1();
+        // f1=100;
+        // alert(f1);
+        // f1=function (x,y) {   return x+y;};
+        // var r=f1(1,2);
+        // alert(r);
+
+        function f1(fn) {
+            alert('这是一个f1函数。');
+            fn();
+        }
+        f1(function () {  alert('直接传递的一个匿名函数！！！');});
+        //f1(f12);
+        function f12() {
+            alert('12');
+        }
+
+        //二.匿名函数的第二种用法：定义匿名函数的同时直接调用该函数
+       // (function (x,y) {  alert(x+y);})(10,50);
+
+
+        //三.第三种,通过new Function()的方式定义匿名函数，可以将函数代码用字符串来表示，同时在函数中使用的变量，
+        //不会作为页面的‘全局变量’出现，在函数外部也访问不到，不像eval（）一样。
+        //var f1=new Function('x','y','z','alert(x+y+z);');//可以写为如下
+        // var f1=new Function('x,y,z','alert(x+y+z);');
+        // f1(1,2,3);
+
+       //看个列子:
+        // var x=1,y=0,z=0;
+        // var add=function (n){
+        //     n=n+1;
+        //     return n;
+        // };
+        // y=add(x);
+        // add=function (n) {
+        //     n = n + 3;
+        //     return n;
+        // };
+        // z=add(x);
+        // alert(y+'...'+z);
+        //???2...4,在这里的匿名函数是一条赋值语句，所以会从上到下依次执行，不会进行“函数预解析”
+    </script>
+</head>
+<body>
+
+</body>
+</html>

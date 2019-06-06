@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // function Person(name) {
+        //     this.user_name=name;
+        //
+        //     //通过这种方式可以模拟私有成员
+        //     //类似于private成员
+        //     var user_age=18;
+        //
+        //     //类似于public成员
+        //     this.setAge=function (age) {
+        //         user_age=age;
+        //     };
+        //
+        //     //类似于public成员
+        //     this.getAge=function () {
+        //         return user_age;
+        //     };
+        // }
+        // var p1=new Person('张三');
+        // p1.setAge(100);
+        // alert(p1.getAge());
+
+
+
+
+//------------闭包-
+        // var x=100;
+        // function fn1() {
+        //     var y=101;
+        //     alert(y);
+        //     alert(x);
+        //         return function () {
+        //         var y=99;
+        //         alert(y);
+        //         alert(x);
+        //     };
+        // }
+        // var fn2=fn1();
+        // fn2();
+
+
+        //列子--------------------------------
+        // function f1() {
+        //     var x=100;
+        //     x++;
+        //     return function () {
+        //         alert(x);
+        //     };
+        // }
+        // var fn=f1();
+        // fn();//101
+    </script>
+</head>
+<body>
+
+</body>
+</html>

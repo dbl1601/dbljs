@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // var n=parseInt('a123b');
+        // if(isNaN(n)){
+        //     alert('转换失败');//判断一个值是否是一个NaN 不能用==或者！=，必须使用isNaN()函数
+        // }else{
+        //     alert('转换成功！');
+        // }
+
+        //---eval()介绍  不安全
+        //  var n='var x=1;x++;alert(x);';
+        //  eval(n);//2,把字符串当作Js代码来解析执行
+        //  x++;
+        //  alert(x);//3
+
+        //---逻辑运算符
+        var n=10,m=100;
+        alert(n<m&&m>n);//true
+
+        //或运算只要一个为真那就输出那个真值，若两个都是真，则输出第一个真值
+        // 与运算要求两个都为真，若其中一个为假则输出假值，若两个都为真，则把最后一个真值输出
+        var r="a"||"";
+        alert(r);//a
+        r=null||15;
+        alert(r);//15
+        r="a"&&0;
+        alert(r);//0
+        r=null&&15;
+        alert(r);//null
+        r="12123"||12;
+        alert(r);//12123
+        r="12123"&&12;
+        alert(r);//12
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

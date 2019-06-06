@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // var sum=0;//变量声明后，使用前一定要赋值，否则就是undefined.
+        // for(var i=1;i<=100;i++){
+        //     sum=sum+i;
+        // }
+        // alert(sum);
+        var sum=0 ;
+        for(var i=1;i<=100;i++){
+            if(i%2!=0){
+                sum+=i;
+            }
+        }
+        alert(sum);
+
+        // var n1='123';
+        // var n2=123;
+        // alert(n1==n2);//true
+        // alert(n1===n2);//false
+
+        // var n1=null;
+        // var n2;
+        // alert(n1==n2);//true当使用==判断时，认为null和undefined相同。
+        // 把null转换为数字，结果为０.而把undefined转换为数字结果为ＮＡＮ．
+        // alert(n1===n2);//false
+
+        // var n1=true;
+        // var n2='false';
+        // alert(n1==n2);//false
+        // alert(n1===n2);//false
+
+        // var s=123;
+        // switch(s){
+        //     case'123':
+        //         alert('等于字符串123');
+        //         break;
+        //     case 123:
+        //         alert('等于数字123');//switch内部使用也是===严格等于来判断是否相等的。
+        //         break;
+        //     default:
+        //         alert('没有找到相等的');
+        //         break;
+        // }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

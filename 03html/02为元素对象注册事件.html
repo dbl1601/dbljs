@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            document.getElementById('btn1').onclick=function () {
+                alert('按钮1被点击了。');
+            };
+            document.getElementById('btn2').onclick=function () {
+                //alert('按钮2被点击了。');
+
+                //改变按钮1 的单击事件的处理程序
+                document.getElementById('btn1').onclick=fnClick;//把函数赋值给它，点击时执行
+
+                //document.getElementById('btn1').onclick=fnClick();//错误；
+                                           // 表示要调用fnClick()这个方法，把其返回值赋值给它
+            };
+            document.getElementById('btn3').onclick=function () {
+                alert(new Date().toLocaleTimeString());
+            };
+        };
+        function fnClick() {
+            alert('--------------');
+        }
+    </script>
+</head>
+<body>
+        <input type="button" name="name" value="按钮1" id="btn1"/>
+        <input type="button" name="name" value="按钮2" id="btn2"/>
+        <input type="button" name="name" value="点击显示当前时间" id="btn3"/>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        //-------定义函数的方法（三种）
+        // function test(a,b){
+        //     var sum=a+b;
+        //     alert(sum);
+        // }
+        // test(2,3);
+
+        // var add=function(m,n){   //匿名函数
+        //     alert(m+n);
+        // };
+        // add(1,2);
+
+        // var add=new Function ("m,n","alert(m+n)");//用的少
+        // add(1,2);
+
+
+
+         //---------函数重载
+        // function f1(){
+        //     alert('first f1');
+        // }
+        // function f1(name) {
+        //     alert(name);
+        // }
+        // f1();//此处结果为？为什么？
+        //     //结果为undefined,,,因为js中没有函数重载的概念，所以遇到同名的函数，会用最后一次函数定义覆盖前面的函数定义。
+        //     //所以下面调用f1()函数，其实调用的是最后一次函数定义，但是最后一次函数定义需要传递一个参数给name变量，
+        //     // 但是却没有传递，所以name变量没有赋值，所以就是undefined。
+        // var x=1,y=0,z=0;
+        // function add(n){
+        //     n=n+1;
+        //     return n;
+        // }y=add(x);
+        // function add(n) {
+        //     n = n + 3;
+        //     return n;
+        // }z=add(x);
+        // alert(y+'...'+z);//4...4，因为函数有‘预解析’功能，所以在执行之前会将所有的函数先进行预解析。
+        // 预解析的时候就会使用最后定义的函数覆盖前面定义的函数。
+
+
+        //----js中不存在重载
+    </script>
+</head>
+<body>
+
+</body>
+</html>

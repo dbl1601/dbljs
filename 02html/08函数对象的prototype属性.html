@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        // function Person(name,age,email) {
+        //     this.user_name=name;
+        //     this.user_age=age;
+        //     this.user_email=email;
+        //     this.sayHi=function () {
+        //         alert('Hi,我是：'+this.user_name+' ,  '+this.user_age+' ,  '+this.user_email);
+        //     };
+        //     this.sayHello=function () {
+        //         alert('Hello');
+        //     };
+        // }
+        // //每次通过Person（）创建对象，都是一个完全独立的对象，对象和对象之间没有关系，类似于c#中的对象
+        // var p1=new Person('cx',13,'cx@132.com');
+        // p1.sayHi();
+        // var p2=new Person('wbq',24,'wbq@134.com');
+        // p2.sayHi();
+        // //----------
+        // p1.user_name='xx';
+        // p1.user_age=26;
+        // p1.user_email='xx@132.com';
+        // p1.sayHi();
+        // p2.sayHi();
+
+//---------------prototype原型对象2----------------------
+//
+//         function Person(name,age,email) {
+//             this.user_name = name;
+//             this.user_age = age;
+//             this.user_email = email;
+//         }
+//         //在prototype的原型对象中加一个sayHi方法
+//         Person.prototype.sayHi=function () {
+//             alert(this.user_name+' ,  '+this.user_age+' ,  '+this.user_email);
+//         };
+//         var p1=new Person('afs',23,'asfs@132.com');
+//         p1.sayHi();
+//         var p2=new Person('asd',23,'asd@221.com');
+//         p2.sayHi();
+
+//-------------原型对象中的成员是只读的------------------
+
+
+
+
+
+//-------------通过原型实现扩展方法的功能----------------
+            String.prototype.addWJX=function () {
+                return this+'*';
+            };
+            var msg='aaaaaaaaaa';
+            msg=msg.addWJX();
+            alert(msg);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

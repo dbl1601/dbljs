@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //把字符串转化为数字类型
+        // var n='123';
+        // alert(n+1);//1231
+
+        // var n='123afsfas';
+        // n=parseInt(n);
+        // alert(n+1);//124
+
+        // var n='p123afsfas';
+        // n=parseInt(n);
+        // alert(typeof (n));//number
+        // alert(n+1);//NaN  ：Not a Number。NaN是一个值，它的数据类型是一个number类型。
+
+        // var n='15';
+        // //把n中的'15'当作八进制进行转换，转换成十进制数字，返回。
+        // n=parseInt(n,8);
+        // alert(n);//13
+
+        // alert(parseInt('99.3'));//99
+        // alert(parseFloat('99.3'));//99.3
+        // alert(parseFloat('99.3.3.3.3'));//99.3
+        // alert(parseFloat('9p9.3'));//9
+        //alert(parseInt('09'));//???9
+        //
+        // //把任意类型转换为数字类型
+        // var n='123.4';
+        // alert(Number(n));//123.4
+
+        //把任意类型转换为string类型
+        // var n=123;
+        // alert(n.toString());
+
+        n=null;
+        alert(n.toString());//报错，null对象不能调用任何方法
+        alert(String(n));//结果为'null'
+
+//---------------------------------------------------------------------------------------------
+// 类型转换参考结果
+        // Number(false)-----------0
+        // Number(true)-------------1
+        // Number(Undefined)------NaN
+        // Number(null)------------0
+        // Number('1.2')----------1.2
+        // Number('12')-------------12
+        // Number('1.2.3')--------NaN
+        // Number(new object())---NaN
+        // Number(50)-------------50
+        //Number('123a')-----------NaN
+
+        // var b1=Boolean("");--------false -空字符串
+        // var b1=Boolean("hello");---true-非空字符串
+        // var b1=Boolean(50);--------true-非零数字
+        // var b1=Boolean(0);---------false-零
+        // var b1=Boolean(null);------false-null
+        // var b1=Boolean(new object());--true-对象
+        // var b1=Boolean(NaN);--------false
+    </script>
+</head>
+<body>
+
+</body>
+</html>
